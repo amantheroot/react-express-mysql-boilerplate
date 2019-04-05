@@ -14,6 +14,14 @@ class toConnectApp extends Component {
     fetch('/api/hello')
       .then(res => res.json())
       .then(res => console.log(res));
+
+    fetch('/api/world', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ post: 'Hello World!' })
+    }).then(res => res.text()).then(res => console.log(res));
   }
 
   headClick = () => {
