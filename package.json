@@ -1,11 +1,9 @@
 {
-  "name": "example-create-react-app-express",
-  "version": "1.0.0",
-  "description": "Example on using create-react-app with a Node Express Backend",
+  "name": "project-one",
+  "version": "0.1.0",
+  "description": "Organic Farming Online Store",
   "author": {
-    "name": "Esau Silva",
-    "twitter": "@_esausilva",
-    "url": "https://esausilva.com"
+    "name": "Aman Kumar"
   },
   "license": "MIT",
   "scripts": {
@@ -25,14 +23,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/esausilva/example-create-react-app-express.git"
-  },
-  "bugs": {
-    "url": "https://github.com/esausilva/example-create-react-app-express/issues"
-  },
-  "keywords": [
-    "node",
-    "express",
-    "create-react-app"
-  ]
+    "url": "https://github.com/amantheroot/project_one.git"
+  }
 }
