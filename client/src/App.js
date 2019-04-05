@@ -10,6 +10,12 @@ const mapStateToProps = store => {
 };
 
 class toConnectApp extends Component {
+  componentDidMount() {
+    fetch('/api/hello')
+      .then(res => res.json())
+      .then(res => console.log(res));
+  }
+
   headClick = () => {
     this.props.dispatch(incrementState());
   }
