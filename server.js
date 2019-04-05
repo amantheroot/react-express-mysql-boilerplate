@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const mysql = require('mysql');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -29,5 +30,24 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
   });
 }
+
+// MYSQL
+const connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : null,
+  database : 'project_one'
+});
+
+connection.connect();
+
+connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
+  if (err) throw err;
+
+  console.log('The solution is:', rows[0].solution);
+})
+
+connection.end();
+
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
