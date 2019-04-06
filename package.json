@@ -1,7 +1,7 @@
 {
-  "name": "project-one",
+  "name": "react-express-mysql-boilerplate",
   "version": "0.1.0",
-  "description": "Organic Farming Online Store",
+  "description": "Boiler Plate For React, Express, MySQL",
   "author": {
     "name": "Aman Kumar"
   },
@@ -23,9 +23,5 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/amantheroot/project_one.git"
   }
 }
