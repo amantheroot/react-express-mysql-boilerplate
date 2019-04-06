@@ -1,7 +1,7 @@
 {
-  "name": "react-express-mysql-boilerplate",
+  "name": "vitta-web-app",
   "version": "0.1.0",
-  "description": "Boiler Plate For React, Express, MySQL",
+  "description": "Billing Software Vitta (Web App)",
   "author": {
     "name": "Aman Kumar"
   },
