@@ -7,7 +7,7 @@ const mapStateToProps = store => {
     products: store.products,
     stocks: store.stocks,
     customers: store.customers,
-    suppliers: store.companies
+    suppliers: store.suppliers
   };
 };
 
