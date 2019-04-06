@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import Layout from "./components/layout";
+
+import A from "./components/a";
+import B from "./components/b";
 
 const mapStateToProps = store => {
   return {
@@ -30,9 +36,14 @@ class toConnectApp extends Component {
     const {companies, products, stocks, customers, suppliers} = this.props;
     console.log(companies, products, stocks, customers, suppliers);
     return (
-      <div className="App">
-        <h1>Hello World!</h1>
-      </div>
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route path="/" component={A} exact />
+            <Route path="/b" component={B} />
+          </Switch>
+        </Layout>
+      </BrowserRouter>
     );
   }
 }
