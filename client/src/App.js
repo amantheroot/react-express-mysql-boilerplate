@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 
-import {incrementState} from "./actions/stateActions";
-
 const mapStateToProps = store => {
   return {
-    store: store.stateReducer.state
+    companies: store.companies,
+    products: store.products,
+    stocks: store.stocks,
+    customers: store.customers,
+    suppliers: store.companies
   };
 };
 
@@ -24,14 +26,12 @@ class toConnectApp extends Component {
     }).then(res => res.text()).then(res => console.log(res));
   }
 
-  headClick = () => {
-    this.props.dispatch(incrementState());
-  }
-
   render() {
+    const {companies, products, stocks, customers, suppliers} = this.props;
+    console.log(companies, products, stocks, customers, suppliers);
     return (
       <div className="App">
-        <h1 onClick={this.headClick}>Hello World! The State is {this.props.store}</h1>
+        <h1>Hello World!</h1>
       </div>
     );
   }

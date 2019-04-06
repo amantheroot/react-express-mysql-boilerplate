@@ -1,3 +1,7 @@
 export default {
-    state: 1
+    companies: [],
+    products: [],
+    stocks: [],
+    customers: [],
+    suppliers: []
 };
