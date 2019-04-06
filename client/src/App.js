@@ -4,8 +4,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Layout from "./components/layout";
 
-import A from "./components/a";
-import B from "./components/b";
+import A from "./components/pages/a";
+import B from "./components/pages/b";
 
 const mapStateToProps = store => {
   return {
