@@ -4,8 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Layout from "./components/layout";
 
-import A from "./components/pages/a";
-import B from "./components/pages/b";
+import HomePage from "./components/pages/homePage";
 
 const mapStateToProps = store => {
   return {
@@ -39,8 +38,7 @@ class toConnectApp extends Component {
       <BrowserRouter>
         <Layout>
           <Switch>
-            <Route path="/" component={A} exact />
-            <Route path="/b" component={B} />
+            <Route path="/" component={HomePage} exact />
           </Switch>
         </Layout>
       </BrowserRouter>
