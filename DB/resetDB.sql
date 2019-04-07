@@ -85,7 +85,6 @@ CREATE TABLE stocks (
   company_id INT UNSIGNED NOT NULL,
   product_id INT UNSIGNED NOT NULL,
   product_qty INT UNSIGNED NOT NULL,
-  product_rate FLOAT UNSIGNED NOT NULL,
   stock_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
 );
 
@@ -106,5 +105,12 @@ CREATE TABLE suppliers (
 );
 
 CREATE TABLE orders (
+  company_id INT UNSIGNED NOT NULL,
+  customer_id INT UNSIGNED NOT NULL,
+  product_id INT UNSIGNED NOT NULL,
+  product_qty_sold INT UNSIGNED NOT NULL,
+  product_price FLOAT UNSIGNED NOT NULL,
+  product_tax FLOAT UNSIGNED NOT NULL,
+  order_time TIMESTAMP NOT NULL,
   order_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
 );
