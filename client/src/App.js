@@ -7,6 +7,7 @@ import {fetchProducts} from "./actions/productsActions";
 import {fetchStocks} from "./actions/stocksActions";
 import {fetchCustomers} from "./actions/customersActions";
 import {fetchSuppliers} from "./actions/suppliersActions";
+import {fetchOrders} from "./actions/ordersActions";
 
 import Layout from "./components/layout";
 
@@ -18,7 +19,8 @@ const mapStateToProps = store => {
     products: store.products,
     stocks: store.stocks,
     customers: store.customers,
-    suppliers: store.suppliers
+    suppliers: store.suppliers,
+    orders: store.orders
   };
 };
 
@@ -59,11 +61,15 @@ class toConnectApp extends Component {
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then(res => res.json())
       .then(res => this.props.dispatch(fetchSuppliers(res)))
+
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(res => res.json())
+      .then(res => this.props.dispatch(fetchOrders(res)))
   }
 
   render() {
-    const {companies, products, stocks, customers, suppliers} = this.props;
-    console.log(companies, products, stocks, customers, suppliers);
+    const {companies, products, stocks, customers, suppliers, orders} = this.props;
+    console.log(companies, products, stocks, customers, suppliers, orders);
     return (
       <BrowserRouter>
         <Layout>

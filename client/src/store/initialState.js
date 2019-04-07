@@ -3,5 +3,6 @@ export default {
     products: [],
     stocks: [],
     customers: [],
-    suppliers: []
+    suppliers: [],
+    orders: []
 };
