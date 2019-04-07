@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS project_one;
+DROP DATABASE IF EXISTS vitta;
 
-CREATE DATABASE IF NOT EXISTS project_one;
+CREATE DATABASE IF NOT EXISTS vitta;
 
-USE project_one;
+USE vitta;
 
 -- TABLES
 CREATE TABLE companies (
