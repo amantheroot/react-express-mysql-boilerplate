@@ -37,7 +37,7 @@ CREATE TABLE companies (
 CREATE TABLE products (
   product_status ENUM('CONTINUE', 'CLOSE') NOT NULL,
   product_type ENUM('NORMAL', 'PROHIBITED') NOT NULL,
-  product_type BOOLEAN NOT NULL,
+  product_hide BOOLEAN NOT NULL,
   product_item VARCHAR(30) NOT NULL,
   product_barcode VARCHAR(10) NOT NULL,
   product_generate ENUM('DEFAULT', 'CREATE') NOT NULL,
