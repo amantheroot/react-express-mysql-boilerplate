@@ -45,8 +45,6 @@ class toConnectApp extends Component {
   }
 
   render() {
-    const {companies, products, stocks, customers, suppliers, orders} = this.props;
-    console.log(companies, products, stocks, customers, suppliers, orders);
     return (
       <BrowserRouter>
         <Layout>
