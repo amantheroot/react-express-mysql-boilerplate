@@ -27,44 +27,21 @@ const mapStateToProps = store => {
 class toConnectApp extends Component {
   componentWillMount() {
     this.getData();
-
-    fetch('/api/hello')
-      .then(res => res.json())
-      .then(res => console.log(res));
-
-    fetch('/api/world', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ post: 'Hello World!' })
-    }).then(res => res.text()).then(res => console.log(res));
   }
 
   getData = () => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('/api/data')
       .then(res => res.json())
-      .then(res => this.props.dispatch(fetchCompanies(res)))
+      .then(data => this.handleData(data))
+  }
 
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(res => res.json())
-      .then(res => this.props.dispatch(fetchProducts(res)))
-    
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(res => res.json())
-      .then(res => this.props.dispatch(fetchStocks(res)))
-
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(res => res.json())
-      .then(res => this.props.dispatch(fetchCustomers(res)))
-    
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(res => res.json())
-      .then(res => this.props.dispatch(fetchSuppliers(res)))
-
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(res => res.json())
-      .then(res => this.props.dispatch(fetchOrders(res)))
+  handleData = data => {
+    this.props.dispatch(fetchCompanies(data.companies));
+    this.props.dispatch(fetchProducts(data.products));
+    this.props.dispatch(fetchStocks(data.stocks));
+    this.props.dispatch(fetchCustomers(data.customers));
+    this.props.dispatch(fetchSuppliers(data.suppliers));
+    this.props.dispatch(fetchOrders(data.orders));
   }
 
   render() {

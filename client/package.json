@@ -1,6 +1,11 @@
 {
-  "name": "my-app",
+  "name": "vitta-web-app",
   "version": "0.1.0",
+  "description": "Billing Software Vitta (Web App)",
+  "author": {
+    "name": "Aman Kumar"
+  },
+  "license": "MIT",
   "dependencies": {
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
