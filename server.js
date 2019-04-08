@@ -27,10 +27,10 @@ const connection = mysql.createConnection({
   database : 'vitta'
 });
 
+connection.connect(err => err? console.error(err):null);
+
 app.get('/api/data', function(req, res) {
   const data = {};
-
-  connection.connect();
 
   let query = 'SELECT * FROM companies';
   connection.query(query, function(err,rows,fields) {
@@ -75,7 +75,6 @@ app.get('/api/data', function(req, res) {
 
     res.send(JSON.stringify(data));
   });
-  connection.end();
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));

@@ -32,7 +32,7 @@ class toConnectApp extends Component {
   getData = () => {
     fetch('/api/data')
       .then(res => res.json())
-      .then(data => this.handleData(data))
+      .then(data => this.handleData(data));
   }
 
   handleData = data => {
