@@ -21,10 +21,10 @@ if (process.env.NODE_ENV === 'production') {
 
 // MYSQL
 const connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : null,
-  database : 'vitta'
+  host     : 'us-cdbr-iron-east-02.cleardb.net',
+  user     : 'bb759aecbca0f5',
+  password : 'd2facdb9',
+  database : 'heroku_3d7b4deecb0694f'
 });
 
 connection.connect(err => err? console.error(err):null);
