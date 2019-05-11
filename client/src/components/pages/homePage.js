@@ -17,6 +17,14 @@ class toConnectHomePage extends Component {
     return (
       <div>
         <h1>Home</h1>
+        <ul>
+          <li>{JSON.stringify(this.props.companies)}</li>
+          <li>{JSON.stringify(this.props.products)}</li>
+          <li>{JSON.stringify(this.props.stocks)}</li>
+          <li>{JSON.stringify(this.props.customers)}</li>
+          <li>{JSON.stringify(this.props.suppliers)}</li>
+          <li>{JSON.stringify(this.props.orders)}</li>
+        </ul>
       </div>
     );
   }
